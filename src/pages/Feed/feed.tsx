@@ -28,15 +28,15 @@ export function Feed() {
 
 	function deletePost(id: number) {
 
-        axios.delete(`https://http://localhost:3000/posts/${id}`)
+        axios.delete(`http://localhost:3000/posts/${id}`)
 
         setPosts(posts.filter(post => post.id !== id ))
 
     }
-
+																																																																																																																																								''
 	return (
 		<div>
-			<HeaderMain />
+			<HeaderMain setPosts={setPosts}/>
 
 			<main>
 				<div className="cards">
@@ -61,7 +61,7 @@ export function Feed() {
 									</div>
 
 									<div className="btn-readmore" >
-										<Link to="/readMore">
+										<Link to={`/readMore/${post.id}`}>
 											<button>ler mais</button>
 										</Link>
 									</div>
