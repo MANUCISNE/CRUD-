@@ -28,7 +28,7 @@ export function Feed() {
 
 	function deletePost(id: number) {
 
-        axios.delete(`https://http://localhost:3000/posts/${id}`)
+        axios.delete(`http://localhost:3000/posts/${id}`)
 
         setPosts(posts.filter(post => post.id !== id ))
 
